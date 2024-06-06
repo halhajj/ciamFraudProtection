@@ -1,0 +1,48 @@
+{
+  "id": "did:web:cryptic-shield-login.fr",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:cryptic-shield-login.fr"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://cryptic-shield-login.fr/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/27915719-950d-41ec-aa9d-ed73d8a28821"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#2fc81808893044788740da4f429e5095vcSigningKey-32c2d",
+      "controller": "did:web:cryptic-shield-login.fr",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "s81Fc3P3NhL7n7_7BuGCBBAssguwAbZb-OOyGbZFHPY",
+        "y": "4VgrV1XgNhIMEqhUao1ZCJJpZRQAh7yOi8Vx3PAlZUE"
+      }
+    }
+  ],
+  "authentication": [
+    "#2fc81808893044788740da4f429e5095vcSigningKey-32c2d"
+  ],
+  "assertionMethod": [
+    "#2fc81808893044788740da4f429e5095vcSigningKey-32c2d"
+  ]
+}
